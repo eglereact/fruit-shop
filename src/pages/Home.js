@@ -1,10 +1,9 @@
+import Header from "../components/Header";
 import TopHeader from "../components/TopHeader";
 
 function Home() {
   return (
     <div>
-      <TopHeader />
-      {/* header */}
       {/* hero */}
       {/* categories carusel */}
       {/* featured products */}
@@ -12,6 +11,7 @@ function Home() {
       {/* latest products */}
       {/* blog */}
       {/* footer */}
+      <h1>Home Page</h1>
     </div>
   );
 }

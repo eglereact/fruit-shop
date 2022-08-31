@@ -6,7 +6,7 @@ import lt from "../images/lt.jpg";
 
 function LanguageButton() {
   return (
-    <Menu as="div" className="relative inline-block text-left pl-4 pr-2">
+    <Menu as="div" className="relative inline-block text-left pl-4 pr-2 z-50">
       <div>
         <Menu.Button className="inline-flex w-full items-center px-4 text-sm text-gray-800 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           English

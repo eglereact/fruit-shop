@@ -1,7 +1,6 @@
 import { MdMail, MdFacebook, MdPerson } from "react-icons/md";
 import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import { FaPinterestP } from "react-icons/fa";
-import { BiChevronDown } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 import LanguageButton from "./LanguageButton";
