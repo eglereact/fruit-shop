@@ -5,12 +5,14 @@ import TopHeader from "./components/TopHeader";
 import Header from "./components/Header";
 import Blog from "./pages/Blog";
 import Contacts from "./pages/Contacts";
+import HeroTop from "./components/HeroTop";
 
 function App() {
   return (
     <BrowserRouter>
       <TopHeader />
       <Header />
+      <HeroTop />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />

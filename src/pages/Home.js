@@ -4,7 +4,6 @@ import TopHeader from "../components/TopHeader";
 function Home() {
   return (
     <div>
-      {/* hero */}
       {/* categories carusel */}
       {/* featured products */}
       {/* discaunt banner */}
