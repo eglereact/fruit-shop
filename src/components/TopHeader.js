@@ -18,24 +18,31 @@ function TopHeader() {
         </div>
         <div className="flex items-center space-x-2 divide-x">
           <div className="flex space-x-4 pr-2">
-            <a href="">
+            <a
+              href="https://www.facebook.com/"
+              className="hover:text-[#7fad39]"
+            >
               <MdFacebook />
             </a>
-            <a href="">
+            <a
+              href="https://www.facebook.com/"
+              className="hover:text-[#7fad39]"
+            >
               <AiOutlineTwitter />
             </a>
-            <a href="">
+            <a
+              href="https://www.facebook.com/"
+              className="hover:text-[#7fad39]"
+            >
               <FaPinterestP />
             </a>
-            <a href="">
+            <a
+              href="https://www.facebook.com/"
+              className="hover:text-[#7fad39]"
+            >
               <AiFillLinkedin />
             </a>
           </div>
-          {/* <div>
-            <h2 className="text-sm flex items-center pl-4 cursor-pointer">
-              English <BiChevronDown />
-            </h2>
-          </div> */}
           <LanguageButton />
           <Link to="/login" className="text-sm flex items-center pl-4">
             <MdPerson className="mr-2" /> Login

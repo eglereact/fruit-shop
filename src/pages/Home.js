@@ -1,9 +1,9 @@
-import Header from "../components/Header";
-import TopHeader from "../components/TopHeader";
+import Hero from "../components/Hero";
 
 function Home() {
   return (
-    <div>
+    <div className="max-w-5xl mx-auto">
+      <Hero />
       {/* categories carusel */}
       {/* featured products */}
       {/* discaunt banner */}

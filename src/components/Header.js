@@ -8,7 +8,7 @@ function Header() {
     <nav className="max-w-5xl mx-auto grid grid-cols-4 gap-10">
       <div className="">
         <Link to="/">
-          <img src={logo} className="h-10 my-4" />
+          <img src={logo} className="h-10 my-4" alt="logo" />
         </Link>
       </div>
       <div className="col-span-2 space-x-10 flex items-center ">

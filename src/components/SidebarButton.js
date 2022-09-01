@@ -27,10 +27,9 @@ function SidebarButton() {
         <Menu.Items className="absolute right-0 w-full origin-top-right divide-y divide-gray-100 bg-white shadow-lg  focus:outline-none">
           <div className=" py-1 ">
             {departments.map((dep) => (
-              <Menu.Item>
+              <Menu.Item key={dep.id}>
                 {({ active }) => (
                   <button
-                    key={dep.id}
                     className={`${
                       active ? "bg-gray-100 text-gray-900" : "text-gray-900"
                     } group flex w-full items-center  px-2 py-2 text-sm`}

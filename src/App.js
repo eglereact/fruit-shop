@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./pages/Shop";
 import TopHeader from "./components/TopHeader";
 import Header from "./components/Header";
