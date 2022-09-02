@@ -2,6 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
+import { departments } from "../data.js";
 
 function SidebarButton() {
   return (
@@ -45,18 +46,5 @@ function SidebarButton() {
     </Menu>
   );
 }
-
-const departments = [
-  { id: 1, name: "Fresh Meat" },
-  { id: 2, name: "Vegetables" },
-  { id: 3, name: "Fruit & Nut Gifts" },
-  { id: 4, name: "Fresh Berries" },
-  { id: 5, name: "Butter & Eggs" },
-  { id: 6, name: "Fastfood" },
-  { id: 7, name: "Fresh Onion" },
-  { id: 8, name: "Papayaya & Crisps" },
-  { id: 9, name: "Oatmeal" },
-  { id: 10, name: "Fresh Bananas" },
-];
 
 export default SidebarButton;

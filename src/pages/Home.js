@@ -1,10 +1,11 @@
+import FruitCarousel from "../components/FruitCarousel";
 import Hero from "../components/Hero";
 
 function Home() {
   return (
     <div className="max-w-5xl mx-auto">
       <Hero />
-      {/* categories carusel */}
+      <FruitCarousel />
       {/* featured products */}
       {/* discaunt banner */}
       {/* latest products */}
