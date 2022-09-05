@@ -43,7 +43,7 @@ function FruitCarousel() {
       >
         {departments.map((card) => {
           return (
-            <div className="mx-4 shadow-md">
+            <div className="mx-4 shadow-md" key={card.id}>
               <Link
                 to="/shop"
                 className="flex items-center justify-center flex-col"

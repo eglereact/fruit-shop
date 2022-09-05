@@ -1,3 +1,4 @@
+import FeaturedList from "../components/FeaturedList";
 import FruitCarousel from "../components/FruitCarousel";
 import Hero from "../components/Hero";
 
@@ -6,7 +7,7 @@ function Home() {
     <div className="max-w-5xl mx-auto">
       <Hero />
       <FruitCarousel />
-      {/* featured products */}
+      <FeaturedList />
       {/* discaunt banner */}
       {/* latest products */}
       {/* blog */}
