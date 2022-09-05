@@ -128,3 +128,30 @@ export const discount = [
     link: "/shop",
   },
 ];
+
+export const blogArticles = [
+  {
+    id: 1,
+    title: "Our Healing Begins in the Soil?",
+    img: "https://post.healthline.com/wp-content/uploads/2020/09/fruit-still-life-732x549-thumbnail.jpg",
+    date: "2022 09 05",
+    text: "Duis sit amet ligula efficitur, vehicula lorem vitae, dapibus magna. Mauris fringilla sodales neque, non dapibus ex. Sed blandit dui sit amet justo posuere, a tristique ipsum vulputate.",
+    link: "/blog",
+  },
+  {
+    id: 2,
+    title: "Healthy Food Choices",
+    img: "https://post.healthline.com/wp-content/uploads/2020/09/healthy-eating-ingredients-732x549-thumbnail.jpg",
+    date: "2022 08 14",
+    text: "Cras rhoncus, felis ac aliquam vestibulum, lectus justo viverra arcu, eget placerat turpis lacus at purus. Proin aliquam egestas risus, ut ultrices tortor viverra a. Aenean non elit purus. Praesent vel vestibulum magna. ",
+    link: "/blog",
+  },
+  {
+    id: 3,
+    title: "Guide to Healthy Eating",
+    img: "https://blog.orthoindy.com/wp-content/uploads/2020/08/orthoindy-a-healthy-environment-could-lead-to-a-healthy-lifestyle.jpg",
+    date: "2022 08 02",
+    text: "Aliquam erat volutpat. Nunc ornare vehicula est. Ut convallis placerat tellus sit amet elementum. Suspendisse eget tempor nulla. Maecenas volutpat facilisis leo, sed eleifend ligula blandit et.",
+    link: "/blog",
+  },
+];

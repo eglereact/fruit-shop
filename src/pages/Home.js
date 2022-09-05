@@ -1,3 +1,4 @@
+import BlogList from "../components/BlogList";
 import DiscountAdd from "../components/DiscountAdd";
 import FeaturedList from "../components/FeaturedList";
 import FruitCarousel from "../components/FruitCarousel";
@@ -13,6 +14,7 @@ function Home() {
       <div className="grid md:grid-cols-2 gap-6 mx-4">
         {discount.map((dis) => (
           <DiscountAdd
+            key={dis.id}
             img={dis.img}
             color={dis.color}
             title={dis.title}
@@ -21,7 +23,7 @@ function Home() {
           />
         ))}
       </div>
-      {/* blog */}
+      <BlogList />
       {/* footer */}
       <h1>Home Page</h1>
     </div>
