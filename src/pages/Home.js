@@ -1,6 +1,8 @@
+import DiscountAdd from "../components/DiscountAdd";
 import FeaturedList from "../components/FeaturedList";
 import FruitCarousel from "../components/FruitCarousel";
 import Hero from "../components/Hero";
+import { discount } from "../data.js";
 
 function Home() {
   return (
@@ -8,8 +10,17 @@ function Home() {
       <Hero />
       <FruitCarousel />
       <FeaturedList />
-      {/* discaunt banner */}
-      {/* latest products */}
+      <div className="grid md:grid-cols-2 gap-6 mx-4">
+        {discount.map((dis) => (
+          <DiscountAdd
+            img={dis.img}
+            color={dis.color}
+            title={dis.title}
+            text={dis.text}
+            link={dis.link}
+          />
+        ))}
+      </div>
       {/* blog */}
       {/* footer */}
       <h1>Home Page</h1>

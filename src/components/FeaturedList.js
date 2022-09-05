@@ -33,7 +33,7 @@ function FeaturedList() {
       <section>
         <div className="flex flex-col items-center">
           <h2 className="text-4xl font-bold mb-4">Featured Products</h2>
-          <div className="border border-b-4 border-[#7FAD39] w-16"></div>
+          <div className="border-b-4 border-[#7FAD39] w-16"></div>
         </div>
         <FeaturedCategories
           categories={categories}

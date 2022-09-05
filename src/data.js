@@ -109,3 +109,22 @@ export const featuredList = [
     category: "vegetable",
   },
 ];
+
+export const discount = [
+  {
+    id: 1,
+    img: "https://www.pngall.com/wp-content/uploads/2016/06/Healthy-Food.png",
+    color: "bg-teal-100",
+    title: "Summer Vegetables",
+    text: "30% discount for fresh vegetables",
+    link: "/shop",
+  },
+  {
+    id: 2,
+    img: "https://i.pinimg.com/originals/b9/b5/5c/b9b55caf0103630a60687e195ca4a90e.png",
+    color: "bg-amber-100",
+    title: "Dried & Drink fruits",
+    text: "75% discount for all juice",
+    link: "/shop",
+  },
+];
