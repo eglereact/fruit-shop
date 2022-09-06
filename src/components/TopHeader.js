@@ -1,13 +1,11 @@
-import { MdMail, MdFacebook, MdPerson } from "react-icons/md";
-import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
-import { FaPinterestP } from "react-icons/fa";
+import { MdMail, MdPerson } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import { socialIcons } from "../data.js";
 import LanguageButton from "./LanguageButton";
 
 function TopHeader() {
   return (
-    <div className="w-full bg-gray-50 text-gray-800">
+    <div className="w-full bg-gray-100 text-gray-800">
       <div className="max-w-5xl mx-auto flex items-center justify-between py-4">
         <div className="flex items-center space-x-4 divide-x">
           <h2 className="flex items-center text-sm">
@@ -18,30 +16,15 @@ function TopHeader() {
         </div>
         <div className="flex items-center space-x-2 divide-x">
           <div className="flex space-x-4 pr-2">
-            <a
-              href="https://www.facebook.com/"
-              className="hover:text-[#7fad39]"
-            >
-              <MdFacebook />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              className="hover:text-[#7fad39]"
-            >
-              <AiOutlineTwitter />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              className="hover:text-[#7fad39]"
-            >
-              <FaPinterestP />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              className="hover:text-[#7fad39]"
-            >
-              <AiFillLinkedin />
-            </a>
+            {socialIcons.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                className="hover:text-[#7fad39]"
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
           <LanguageButton />
           <Link to="/login" className="text-sm flex items-center pl-4">

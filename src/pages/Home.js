@@ -24,8 +24,6 @@ function Home() {
         ))}
       </div>
       <BlogList />
-      {/* footer */}
-      <h1>Home Page</h1>
     </div>
   );
 }

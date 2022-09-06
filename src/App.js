@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Blog from "./pages/Blog";
 import Contacts from "./pages/Contacts";
 import HeroTop from "./components/HeroTop";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/blog" element={<Blog />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

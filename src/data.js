@@ -1,3 +1,7 @@
+import { MdFacebook } from "react-icons/md";
+import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
+import { FaPinterestP } from "react-icons/fa";
+
 export const departments = [
   {
     id: 1,
@@ -154,4 +158,11 @@ export const blogArticles = [
     text: "Aliquam erat volutpat. Nunc ornare vehicula est. Ut convallis placerat tellus sit amet elementum. Suspendisse eget tempor nulla. Maecenas volutpat facilisis leo, sed eleifend ligula blandit et.",
     link: "/blog",
   },
+];
+
+export const socialIcons = [
+  { id: 1, icon: <MdFacebook />, link: "https://www.facebook.com" },
+  { id: 2, icon: <AiOutlineTwitter />, link: "https://twitter.com" },
+  { id: 3, icon: <FaPinterestP />, link: "https://www.pinterest.com" },
+  { id: 4, icon: <AiFillLinkedin />, link: "https://www.linkedin.com" },
 ];
