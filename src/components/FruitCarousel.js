@@ -10,9 +10,17 @@ function FruitCarousel() {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    superLargeDesktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 3,
+    },
+    superLarge: {
+      breakpoint: { max: 768, min: 520 },
       items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 520, min: 464 },
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -48,7 +56,7 @@ function FruitCarousel() {
                 to="/shop"
                 className="flex items-center justify-center flex-col"
               >
-                <img style={{ height: "200px" }} src={card.img} alt="img" />
+                <img className="h-52" src={card.img} alt="img" />
                 <p className="bg-gray-100 w-full py-2 text-gray-800 font-bold text-center">
                   {card.name}
                 </p>

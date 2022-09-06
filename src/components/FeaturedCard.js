@@ -37,7 +37,11 @@ function FeaturedCard({ product }) {
             </div>
           </div>
         </div>
-        <img alt="" className="object-cover w-full p-5" src={product.img} />
+        <img
+          alt=""
+          className="object-contain w-full p-5 h-52"
+          src={product.img}
+        />
       </div>
       <h2 className="mt-2">{product.name}</h2>
       <p className="font-bold">${product.price}</p>

@@ -1,6 +1,6 @@
 function FeaturedCategories({ filterProducts, categories, active }) {
   return (
-    <div className="text-center my-10 text-xl space-x-8">
+    <div className="text-center my-10 text-xl space-x-4 md:space-x-8">
       {categories.map((category, index) => (
         <button
           key={index}
