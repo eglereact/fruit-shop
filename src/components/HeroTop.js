@@ -4,7 +4,7 @@ import SidebarButton from "./SidebarButton";
 
 function HeroTop() {
   return (
-    <div className="max-w-5xl mx-auto ">
+    <div className="max-w-6xl mx-auto ">
       <div className="grid md:grid-cols-4 py-2 content-center lg:gap-10 gap-2 mx-4">
         <div className="lg:w-52 w-full">
           <SidebarButton />

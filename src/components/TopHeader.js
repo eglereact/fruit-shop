@@ -5,16 +5,16 @@ import LanguageButton from "./LanguageButton";
 
 function TopHeader() {
   return (
-    <div className="w-full bg-gray-100 text-gray-800">
-      <div className="max-w-5xl mx-auto flex items-center justify-between py-4">
-        <div className="flex items-center space-x-4 divide-x">
+    <div className="w-full bg-gray-100 text-gray-800 hidden md:block">
+      <div className="max-w-6xl mx-auto flex items-center justify-between py-4">
+        <div className="flex items-center space-x-4 divide-x ml-4">
           <h2 className="flex items-center text-sm">
             <MdMail className="mr-2" />
             hello@fruitshop.com
           </h2>
           <h2 className="text-sm pl-4">Free Shipping for all Order of $99</h2>
         </div>
-        <div className="flex items-center space-x-2 divide-x">
+        <div className="flex items-center space-x-2 divide-x mr-4">
           <div className="flex space-x-4 pr-2">
             {socialIcons.map((item) => (
               <a
@@ -27,7 +27,7 @@ function TopHeader() {
             ))}
           </div>
           <LanguageButton />
-          <Link to="/login" className="text-sm flex items-center pl-4">
+          <Link to="/login" className="text-sm flex items-center pl-4 ">
             <MdPerson className="mr-2" /> Login
           </Link>
         </div>

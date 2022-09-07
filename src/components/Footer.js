@@ -5,7 +5,7 @@ import logo from "../images/logo.png";
 function Footer() {
   return (
     <main className="bg-gray-100 pt-10 ">
-      <div className="max-w-5xl mx-auto ">
+      <div className="max-w-6xl mx-auto ">
         <div className="grid md:grid-cols-3 mx-4">
           <div className="space-y-2 mb-4">
             <Link to="/">

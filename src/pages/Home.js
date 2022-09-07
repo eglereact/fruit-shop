@@ -7,7 +7,7 @@ import { discount } from "../data.js";
 
 function Home() {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <Hero />
       <FruitCarousel />
       <FeaturedList />

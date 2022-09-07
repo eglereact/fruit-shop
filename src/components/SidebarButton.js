@@ -6,7 +6,7 @@ import { departments } from "../data.js";
 
 function SidebarButton() {
   return (
-    <Menu as="div" className="relative inline-block text-left z-50 w-full">
+    <Menu as="div" className="relative inline-block text-left z-40 w-full">
       <Menu.Button
         className="inline-flex w-full items-center px-4 py-3 justify-center space-x-2 bg-[#7FAD39] text-white
           focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold"

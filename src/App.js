@@ -7,10 +7,12 @@ import Blog from "./pages/Blog";
 import Contacts from "./pages/Contacts";
 import HeroTop from "./components/HeroTop";
 import Footer from "./components/Footer";
+import NavResponsive from "./components/NavResponsive";
 
 function App() {
   return (
     <BrowserRouter>
+      <NavResponsive />
       <TopHeader />
       <Header />
       <HeroTop />

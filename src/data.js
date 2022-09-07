@@ -166,3 +166,10 @@ export const socialIcons = [
   { id: 3, icon: <FaPinterestP />, link: "https://www.pinterest.com" },
   { id: 4, icon: <AiFillLinkedin />, link: "https://www.linkedin.com" },
 ];
+
+export const links = [
+  { id: 1, name: "Home", url: "/" },
+  { id: 2, name: "Shop", url: "/shop" },
+  { id: 3, name: "Blog", url: "/blog" },
+  { id: 4, name: "Contacts", url: "/contacts" },
+];
