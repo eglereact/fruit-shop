@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 function PageHero({ title, image }) {
   return (
-    <div class="relative w-full h-40 overflow-hidden my-6">
-      <img src={image} alt="Avatar" class="object-cover w-full h-full" />
+    <div className="relative w-full h-40 overflow-hidden my-6">
+      <img src={image} alt="Avatar" className="object-cover w-full h-full" />
       <div
-        class="absolute w-full h-full bottom-0 flex justify-center items-center inset-x-0 bg-gray-800/30
+        className="absolute w-full h-full bottom-0 flex justify-center items-center inset-x-0 bg-gray-800/30
         text-white text-xs text-center leading-4"
       >
         <h3 className="text-4xl">

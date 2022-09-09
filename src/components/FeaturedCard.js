@@ -40,10 +40,10 @@ function FeaturedCard({ product }) {
         <img
           alt=""
           className="object-contain w-full p-5 h-52"
-          src={product.img}
+          src={product.url}
         />
       </div>
-      <h2 className="mt-2">{product.name}</h2>
+      <h2 className="mt-2 capitalize">{product.name}</h2>
       <p className="font-bold">${product.price}</p>
     </motion.div>
   );

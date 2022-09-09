@@ -1,32 +1,46 @@
-import { useState } from "react";
-import { featuredList } from "../data.js";
+import { useEffect, useState } from "react";
+import { useProductsContext } from "../context/product_context.js";
+import { getUniqueValues } from "../utils/helpers.js";
 import FeaturedCard from "./FeaturedCard.js";
 import FeaturedCategories from "./FeaturedCategories.js";
 
-const allCategories = [
-  "all",
-  ...new Set(featuredList.map((product) => product.category)),
-];
-
-console.log(allCategories);
-
 function FeaturedList() {
-  const [featuredProducts, setFeatureProducts] = useState(featuredList);
-  const [categories, setCategories] = useState(allCategories);
+  const {
+    products_loading: loading,
+    products_error: error,
+    featured_products: featured,
+  } = useProductsContext();
+  const [featuredProducts, setFeatureProducts] = useState(featured);
+  const categories = getUniqueValues(featured, "category");
   const [active, setActive] = useState(categories[0]);
+
+  console.log(featuredProducts);
+  console.log(categories);
+
+  useEffect(() => {
+    setFeatureProducts(featured);
+  }, []);
 
   const filterProducts = (category) => {
     if (category === "all") {
-      setFeatureProducts(featuredList);
+      setFeatureProducts(featured);
       setActive(category);
       return;
     }
-    const newProduct = featuredList.filter(
+    const newProduct = featured.filter(
       (product) => product.category === category
     );
     setFeatureProducts(newProduct);
     setActive(category);
   };
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>There was in error</h1>;
+  }
 
   return (
     <main className="my-16">
