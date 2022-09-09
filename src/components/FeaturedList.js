@@ -14,12 +14,9 @@ function FeaturedList() {
   const categories = getUniqueValues(featured, "category");
   const [active, setActive] = useState(categories[0]);
 
-  console.log(featuredProducts);
-  console.log(categories);
-
   useEffect(() => {
     setFeatureProducts(featured);
-  }, []);
+  }, [featured]);
 
   const filterProducts = (category) => {
     if (category === "all") {
