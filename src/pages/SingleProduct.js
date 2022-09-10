@@ -34,7 +34,7 @@ function SingleProduct() {
   }
 
   console.log(product);
-  return <div>SingleProduct {product.fields.name}</div>;
+  return <div>SingleProduct {product?.fields?.name}</div>;
 }
 
 export default SingleProduct;
