@@ -4,6 +4,7 @@ import {
   BsFillCartFill,
   BsFillHeartFill,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function FeaturedCard({ product }) {
   return (
@@ -15,7 +16,10 @@ function FeaturedCard({ product }) {
       transition={{ ease: "easeOut", duration: 0.5 }}
       className="m-4 text-center"
     >
-      <div className="h-60 bg-gray-100 w-full overflow-hidden  aspect-video cursor-pointer  relative group">
+      <Link
+        to={`/shop/${product.id}`}
+        className="h-60 bg-gray-100 w-full overflow-hidden block aspect-video cursor-pointer  relative group"
+      >
         <div
           className="z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute
            inset-x-0 -bottom-6 pt-30 text-white flex items-end"
@@ -42,7 +46,7 @@ function FeaturedCard({ product }) {
           className="object-contain w-full p-5 h-52"
           src={product.url}
         />
-      </div>
+      </Link>
       <h2 className="mt-2 capitalize">{product.name}</h2>
       <p className="font-bold">${product.price}</p>
     </motion.div>

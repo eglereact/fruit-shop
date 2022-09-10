@@ -5,6 +5,9 @@ import {
   GET_PRODUCTS_ERROR,
   GET_PRODUCTS_LOADING,
   GET_PRODUCTS_SUCCESS,
+  GET_SINGLE_PRODUCT_ERROR,
+  GET_SINGLE_PRODUCT_LOADING,
+  GET_SINGLE_PRODUCT_SUCCESS,
 } from "../actions.js";
 
 const initialState = {
@@ -12,6 +15,9 @@ const initialState = {
   products_error: false,
   products: [],
   featured_products: [],
+  single_product: {},
+  single_product_error: false,
+  single_product_loading: false,
 };
 
 const products_url = "https://api-eglereact.netlify.app/api/fruitshop";
@@ -32,6 +38,17 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const fetchSingleProduct = async (url) => {
+    dispatch({ type: GET_SINGLE_PRODUCT_LOADING });
+    try {
+      const response = await axios.get(url);
+      const singleProduct = response.data;
+      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
+    } catch (error) {
+      dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
+    }
+  };
+
   useEffect(() => {
     fetchProducts(products_url);
   }, []);
@@ -40,6 +57,7 @@ export const ProductsProvider = ({ children }) => {
     <ProductsContext.Provider
       value={{
         ...state,
+        fetchSingleProduct,
       }}
     >
       {children}

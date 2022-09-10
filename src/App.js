@@ -8,6 +8,7 @@ import Contacts from "./pages/Contacts";
 import HeroTop from "./components/HeroTop";
 import Footer from "./components/Footer";
 import NavResponsive from "./components/NavResponsive";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route exact path="/blog" element={<Blog />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/shop/:id" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </BrowserRouter>
