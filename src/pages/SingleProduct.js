@@ -3,6 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useProductsContext } from "../context/product_context";
 import PageHero from "../components/PageHero";
 import { socialIcons } from "../data.js";
+import ProductImages from "../components/ProductImages";
+import Stars from "../components/Stars";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -60,13 +62,15 @@ function SingleProduct() {
     <main>
       <PageHero title={name} image={url} product />
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 mt-16 mx-4">
-          <section>Images</section>
+        <div className="grid md:grid-cols-2 mt-16 mx-4 gap-8">
+          <section>
+            <ProductImages images={image} />
+          </section>
           <section>
             <h2 className="text-gray-800 text-4xl font-bold pb-2 capitalize">
               {name}
             </h2>
-            <div>★★★★★</div>
+            <Stars rating={rating} />
             <h5 className="text-red-500 text-3xl py-4">${price}</h5>
             <p className="text-gray-500 mb-10">{description}</p>
             <div>Cart</div>
