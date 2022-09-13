@@ -5,6 +5,7 @@ import PageHero from "../components/PageHero";
 import { socialIcons } from "../data.js";
 import ProductImages from "../components/ProductImages";
 import Stars from "../components/Stars";
+import AddToCart from "../components/AddToCart";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -44,7 +45,6 @@ function SingleProduct() {
     rating,
     price,
     description,
-    stock,
     id: sku,
     image,
     category,
@@ -55,8 +55,6 @@ function SingleProduct() {
   } = product?.fields || {};
 
   const { url } = image?.[0] || "";
-
-  console.log(url);
 
   return (
     <main>
@@ -73,7 +71,9 @@ function SingleProduct() {
             <Stars rating={rating} />
             <h5 className="text-red-500 text-3xl py-4">${price}</h5>
             <p className="text-gray-500 mb-10">{description}</p>
-            <div>Cart</div>
+
+            {available && <AddToCart product={product} />}
+
             <div className="border-b border-gray-200 my-10"></div>
             <div className="flex flex-col w-full text-gray-800">
               <p className="flex">
