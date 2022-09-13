@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useProductsContext } from "../context/product_context";
 import PageHero from "../components/PageHero";
@@ -7,6 +7,7 @@ import ProductImages from "../components/ProductImages";
 import Stars from "../components/Stars";
 import AddToCart from "../components/AddToCart";
 import SingleProductTab from "../components/SingleProductTab";
+import FeaturedCard from "../components/FeaturedCard";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -16,6 +17,7 @@ function SingleProduct() {
     single_product_error: error,
     single_product: product,
     fetchSingleProduct,
+    products,
   } = useProductsContext();
   const single_product_url = `https://api-eglereact.netlify.app/api/fruitshop?id=`;
 
@@ -102,6 +104,18 @@ function SingleProduct() {
           </section>
         </div>
         <SingleProductTab />
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl font-bold mb-4">Related Products</h2>
+          <div className="border-b-4 border-[#7FAD39] w-16"></div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-10">
+          {products
+            .filter((product) => product.category === category)
+            .slice(0, 4)
+            .map((product) => (
+              <FeaturedCard key={product.id} product={product} />
+            ))}
+        </div>
       </div>
     </main>
   );
