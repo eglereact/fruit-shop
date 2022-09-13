@@ -6,6 +6,7 @@ import { socialIcons } from "../data.js";
 import ProductImages from "../components/ProductImages";
 import Stars from "../components/Stars";
 import AddToCart from "../components/AddToCart";
+import SingleProductTab from "../components/SingleProductTab";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -37,8 +38,6 @@ function SingleProduct() {
   if (error) {
     return <h1>There was in error</h1>;
   }
-
-  console.log(product);
 
   const {
     name,
@@ -102,6 +101,7 @@ function SingleProduct() {
             </div>
           </section>
         </div>
+        <SingleProductTab />
       </div>
     </main>
   );

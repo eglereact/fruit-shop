@@ -173,3 +173,55 @@ export const links = [
   { id: 3, name: "Blog", url: "/blog" },
   { id: 4, name: "Contacts", url: "/contacts" },
 ];
+
+export const tabs = [
+  {
+    id: 1,
+    name: "Description",
+    paragraph1:
+      "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. \
+       Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam \
+        vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis \
+        porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, \
+        convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit \
+        amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit\
+         neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.",
+    paragraph2:
+      "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, \
+       consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies \
+       ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.\
+        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula \
+        elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum \
+        sed sit amet dui. Proin eget tortor risus.",
+  },
+  {
+    id: 2,
+    name: "Information",
+    paragraph1:
+      "Donec ac dui vitae nisl consequat commodo sed eget mi. Vivamus convallis ex dui, eget molestie mi dictum non.\
+       Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin tempor\
+        accumsan dui, et pulvinar felis semper ac. Nullam non augue a urna aliquam euismod. Maecenas nec sapien \
+        a urna ornare vulputate eu vitae felis. Cras bibendum porta lacus, a scelerisque mauris vulputate quis. \
+        Duis tincidunt venenatis est ac aliquet.",
+    paragraph2:
+      "Sed nec ornare odio. Ut at metus imperdiet, rutrum lorem rutrum, mattis lacus. Class aptent taciti sociosqu\
+       ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id augue neque. Curabitur imperdiet \
+       euismod est ullamcorper rhoncus. Duis eget luctus diam. Donec sit amet risus fermentum, laoreet lacus a, \
+       mattis arcu. Aliquam eget imperdiet turpis, ultricies porttitor eros. Aliquam vestibulum congue congue. \
+       Cras tempus et sem nec aliquet. Vivamus eleifend maximus luctus.",
+  },
+  {
+    id: 3,
+    name: "Reviews (12)",
+    paragraph1:
+      "Etiam iaculis a ipsum accumsan porta. Praesent ut neque eros. Donec porta vehicula purus, at rhoncus quam \
+      varius non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent \
+      eleifend blandit orci nec fringilla. Maecenas pharetra, mauris vel auctor ullamcorper, nunc nulla rutrum mi,\
+       ut bibendum massa magna rhoncus eros. Vivamus imperdiet tincidunt nibh vel elementum.",
+    paragraph2:
+      "Duis vestibulum fringilla dictum. Nam in tortor tortor. Pellentesque malesuada erat eget est egestas\
+       vestibulum. Duis laoreet mattis nulla vitae iaculis. Donec a dignissim lectus. Sed sodales metus et \
+       turpis tempus, euismod mattis dui vulputate. Nulla in ultrices tellus, sit amet posuere ante. Mauris\
+        hendrerit vulputate tortor, eget placerat justo posuere at. Nulla facilisi. Proin vulputate ultrices laoreet.",
+  },
+];
