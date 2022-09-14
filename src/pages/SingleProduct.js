@@ -8,6 +8,8 @@ import Stars from "../components/Stars";
 import AddToCart from "../components/AddToCart";
 import SingleProductTab from "../components/SingleProductTab";
 import FeaturedCard from "../components/FeaturedCard";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -34,11 +36,11 @@ function SingleProduct() {
   }, [error]);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h1>There was in error</h1>;
+    return <Error />;
   }
 
   const {

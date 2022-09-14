@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useProductsContext } from "../context/product_context.js";
 import { getUniqueValues } from "../utils/helpers.js";
+import Error from "./Error.js";
 import FeaturedCard from "./FeaturedCard.js";
 import FeaturedCategories from "./FeaturedCategories.js";
+import Loading from "./Loading.js";
 
 function FeaturedList() {
   const {
@@ -32,11 +34,11 @@ function FeaturedList() {
   };
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h1>There was in error</h1>;
+    return <Error />;
   }
 
   return (
