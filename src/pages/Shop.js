@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import ProductsList from "../components/ProductsList";
+import Sort from "../components/Sort";
 
 function Shop() {
   return (
@@ -12,7 +13,7 @@ function Shop() {
         <div className="mx-4 grid md:grid-cols-4">
           Filters
           <div className="col-span-3">
-            <h1>Sort</h1>
+            <Sort />
             <ProductsList />
           </div>
         </div>

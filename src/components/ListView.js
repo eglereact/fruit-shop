@@ -11,12 +11,11 @@ function ListView({ products }) {
     <div>
       {products.map((product) => {
         const { id, name, description, url, price } = product;
-        console.log(product);
         return (
-          <div className="flex items-center my-6" key={id}>
+          <div className="flex items-center mb-6" key={id}>
             <div>
               <div className="w-36 h-36 sm:w-60 sm:h-60 bg-gray-100 relative group flex justify-center items-center ">
-                <img src={url} className="object-contain  p-4 " />
+                <img src={url} className="object-contain  p-4 " alt={name} />
                 <Link
                   to={`/shop/${product.id}`}
                   className=" opacity-0 w-36 h-36 sm:w-60 sm:h-60 group-hover:opacity-100 duration-300 absolute  bottom-0 flex justify-center items-center text-3xl bg-black/20 text-white"
