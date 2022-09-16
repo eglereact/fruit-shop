@@ -8,6 +8,8 @@ function Sort() {
     grid_view,
     setGridView,
     setListView,
+    updateSort,
+    sort,
   } = useFilterContext();
   return (
     <section className="flex justify-between items-center border-t border-gray-200 py-10 ">
@@ -19,6 +21,8 @@ function Sort() {
           name="sort"
           id="sort"
           className="capitalize font-bold text-gray-800 ml-2 outline-none"
+          value={sort}
+          onChange={updateSort}
         >
           <option value="price-lowest">price ( lowest )</option>
           <option value="price-highest">price ( highest )</option>
