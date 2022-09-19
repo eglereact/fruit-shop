@@ -34,6 +34,48 @@ function Filters() {
               <AiOutlineSearch />
             </button>
           </div>
+          <div className="mb-4">
+            <h3 className="text-gray-800 font-bold text-2xl my-4">
+              Department
+            </h3>
+            <div className="flex flex-wrap md:flex-col items-start">
+              {categories.map((cat, index) => (
+                <button
+                  key={index}
+                  onClick={updateFilters}
+                  name="category"
+                  type="button"
+                  className={`${
+                    category === cat.toLowerCase() &&
+                    "font-bold border-b-2 border-[#7fad39]"
+                  } capitalize mr-4 md:mb-3 text-gray-800`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="mb-4">
+            <h3 className="text-gray-800 font-bold text-2xl my-4">
+              Popular Size
+            </h3>
+            <div className="flex flex-wrap items-start">
+              {sizes.map((s, index) => (
+                <button
+                  key={index}
+                  onClick={updateFilters}
+                  name="size"
+                  type="button"
+                  className={`${
+                    size.toLowerCase() === s.toLowerCase() &&
+                    "font-bold text-gray-800 bg-gray-200"
+                  } capitalize mr-4 md:mb-3 text-gray-400 bg-gray-100 py-2 px-6 text-sm mb-2`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
         </form>
       </div>
     </section>
