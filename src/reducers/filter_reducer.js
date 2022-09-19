@@ -11,10 +11,14 @@ import {
 
 const filter_reducer = (state, action) => {
   if (action.type === LOAD_PRODUCTS) {
+    let maxPrice = action.payload.map((product) => product.price);
+    maxPrice = Math.max(...maxPrice);
+
     return {
       ...state,
       all_products: [...action.payload],
       filtered_products: [...action.payload],
+      filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
     };
   }
 
@@ -54,7 +58,17 @@ const filter_reducer = (state, action) => {
         next.name.localeCompare(current.name)
       );
     }
+
     return { ...state, filtered_products: tempProducts };
+  }
+
+  if (action.type === UPDATE_FILTERS) {
+    const { name, value } = action.payload;
+    return { ...state, filters: { ...state.filters, [name]: value } };
+  }
+
+  if (action.type === FILTER_PRODUCTS) {
+    return { ...state };
   }
 
   throw new Error(`No Matching "${action.type}" - action type`);
