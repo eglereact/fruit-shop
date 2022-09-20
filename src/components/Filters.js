@@ -1,10 +1,11 @@
 import { useFilterContext } from "../context/filter_context";
 import { AiOutlineSearch } from "react-icons/ai";
 import { getUniqueValues } from "../utils/helpers";
+import { BsCheck } from "react-icons/bs";
 
 function Filters() {
   const {
-    filters: { text, category, size, color, mix_price, price, max_price },
+    filters: { text, category, size, color, min_price, price, max_price },
     updateFilters,
     clearFilters,
     all_products,
@@ -55,6 +56,47 @@ function Filters() {
               ))}
             </div>
           </div>
+          <div>
+            <h3 className="text-gray-800 font-bold text-2xl my-4">Price</h3>
+            <input
+              type="range"
+              name="price"
+              onChange={updateFilters}
+              min={min_price}
+              max={max_price}
+              value={price}
+              className="w-full accent-red-500 border border-white "
+            />
+            <p className="text-red-500 font-bold">${price}</p>
+          </div>
+          <div>
+            <h3 className="text-gray-800 font-bold text-2xl my-4">Colors</h3>
+            <div className="grid grid-cols-2">
+              {colors.map((c, index) => (
+                <button
+                  className={`${
+                    color.toLowerCase() === c.toLowerCase() && "font-bold"
+                  } flex items-center capitalize text-gray-800 mb-4`}
+                  key={index}
+                  name="color"
+                  data-color={c}
+                  onClick={updateFilters}
+                >
+                  <span
+                    className={`${
+                      c === "all"
+                        ? "w-4 h-4 rounded-full mr-2 text-gray-800"
+                        : "w-4 h-4 rounded-full border border-gray-200 mr-2 flex items-center justify-center text-gray-200"
+                    } `}
+                    style={{ background: c }}
+                  >
+                    {color === c && <BsCheck />}
+                  </span>
+                  {c}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="mb-4">
             <h3 className="text-gray-800 font-bold text-2xl my-4">
               Popular Size
@@ -77,6 +119,13 @@ function Filters() {
             </div>
           </div>
         </form>
+        <button
+          type="button"
+          onClick={clearFilters}
+          className="bg-[#7FAD39] w-full text-white font-bold py-2 mt-10 hover:bg-[#7FAD39]/90"
+        >
+          Clear Filters
+        </button>
       </div>
     </section>
   );
