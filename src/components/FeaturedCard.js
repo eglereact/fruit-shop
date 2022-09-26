@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   BsFillShareFill,
   BsFillCartFill,
@@ -35,9 +36,9 @@ function FeaturedCard({ product }) {
               <div className="featured-icon">
                 <BsFillShareFill />
               </div>
-              <div className="featured-icon">
+              <button className="featured-icon">
                 <BsFillCartFill />
-              </div>
+              </button>
             </div>
           </div>
         </div>

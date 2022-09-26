@@ -27,12 +27,14 @@ function CartTotals() {
           <h2 className="text-gary-800 font-bold text-xl mb-6">Cart Total</h2>
           <div className="flex justify-between items-center pb-4 border-b border-gray-200">
             <h3 className="font-bold text-gray-800"> Subtotal</h3>
-            <h3 className="font-bold text-red-500 text-xl">${total_amount}</h3>
+            <h3 className="font-bold text-red-500 text-xl">
+              ${total_amount.toFixed(2)}
+            </h3>
           </div>
           <div className="flex justify-between items-center pt-4">
             <h3 className="font-bold text-gray-800">Total</h3>
             <h3 className="font-bold text-red-500 text-xl">
-              ${total_amount + shipping_fee}
+              ${(total_amount + shipping_fee).toFixed(2)}
             </h3>
           </div>
           <Link

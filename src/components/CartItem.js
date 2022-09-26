@@ -4,8 +4,12 @@ import { useCartContext } from "../context/cart_context";
 function CartItem({ item }) {
   const { removeItem, toggleAmount } = useCartContext();
 
-  const increase = () => {};
-  const decrease = () => {};
+  const increase = () => {
+    toggleAmount(item.id, "inc");
+  };
+  const decrease = () => {
+    toggleAmount(item.id, "dec");
+  };
 
   return (
     <div className="flex py-6 border-b border-gray-100">
@@ -38,7 +42,9 @@ function CartItem({ item }) {
             </button>
           </div>
         </div>
-        <p className="cart-item font-bold">${item.price * item.amount}</p>
+        <p className="cart-item font-bold">
+          ${(item.price * item.amount).toFixed(2)}
+        </p>
         <button
           type="button"
           className="w-1/6 text-gray-400 flex justify-end"

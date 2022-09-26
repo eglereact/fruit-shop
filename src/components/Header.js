@@ -3,8 +3,10 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
 import logo from "../images/logo.png";
 import { links } from "../data.js";
+import { useCartContext } from "../context/cart_context";
 
 function Header() {
+  const { total_items, total_amount } = useCartContext();
   return (
     <nav className="max-w-6xl mx-auto grid md:grid-cols-4 gap-2 lg:gap-10">
       <div className="hidden md:block ml-4">
@@ -32,12 +34,16 @@ function Header() {
           <AiFillHeart className="text-[24px]" />
           <span className="badge">3</span>
         </span>
-        <span className="relative inline-block -z-10 md:z-0 cursor-pointer">
+        <Link
+          to="/cart"
+          className="relative inline-block -z-10 md:z-0 cursor-pointer"
+        >
           <BsFillHandbagFill className="text-[24px]" />
-          <span className="badge">5</span>
-        </span>
+          <span className="badge">{total_items}</span>
+        </Link>
         <p>
-          item: <span className="font-bold text-sm">$150.00</span>
+          item:{" "}
+          <span className="font-bold text-sm">${total_amount.toFixed(2)}</span>
         </p>
       </div>
     </nav>
